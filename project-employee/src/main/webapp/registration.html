@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: black;
+            font-size: 24px;
+            text-decoration: underline;
+        }
+
+        .registration-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 500px;
+        }
+
+        .registration-form label {
+            color: #333;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="password"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .registration-form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .register-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .register-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+	  <form action="registration" method="post" class="registration-form">
+	  <label><h1><u><center>Registration Page</center></u></h1></label>
+        <label for="user_name">USER NAME :</label>
+        <input type="text" name="user_name" id="user_name" required="required" placeholder="Enter your name">
+        <br><br>
+        <label for="user_email">USER EMAIL :</label>
+        <input type="text" name="user_email" id="user_email" required="required" placeholder="Enter your email-id"> 
+        <br><br>
+        <label for="user_password">USER PASSWORD :</label>
+        <input type="password" name="user_password" id="user_password" required="required" placeholder="Enter your password">
+        <br><br>
+        <label for="user_role">USER ROLE :</label>
+        
+        <input type="radio" value="manager" name="user_role" id="manager_role"> <label for="manager_role">Manager</label>
+        &nbsp;&nbsp;
+        <input type="radio" value="employee"  name="user_role" id="employee_role"> <label for="employee_role">Employee</label>
+        <br><br>
+        <label for="user_designation">USER DESIGNATION :</label>
+        <input type="text" name="user_designation" id="user_designation" required="required" placeholder="Enter your designation ">
+        <br><br>
+        <label for="user_salary">USER SALARY :</label>
+        <input type="text" name="user_salary" id="user_salary" required="required" placeholder="Enter your salary">
+        <br><br>
+        <input type="submit" value="Register" class="register-button">
+    </form>
+</body>
+</html>
